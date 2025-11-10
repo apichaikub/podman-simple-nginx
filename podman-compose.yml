@@ -7,4 +7,9 @@ services:
       - "3000:80"
     volumes:
       - ./html:/usr/share/nginx/html:ro
-    network_mode: "slirp4netns:allow_host_loopback=true"
+    networks:
+      - web-public
+
+networks:
+  web-public:
+    external: true
