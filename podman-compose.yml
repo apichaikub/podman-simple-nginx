@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  web:
+    image: docker.io/library/nginx:alpine
+    container_name: nginx-simple
+    ports:
+      - "3000:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
