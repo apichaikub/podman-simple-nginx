@@ -8,3 +8,4 @@ services:
       - "3000:80"
     volumes:
       - ./html:/usr/share/nginx/html:ro
+    network_mode: "host"
